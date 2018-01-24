@@ -19,6 +19,7 @@ class chartController: UIViewController {
         
         lineChart.frame = CGRect(x: 20, y: 30, width: self.view.bounds.size.width-40, height: self.view.bounds.size.height-60)
         
+        
         let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
         let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
         
