@@ -17,6 +17,7 @@
 		A4D37551201736EA00EE71FE /* chartsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D37550201736EA00EE71FE /* chartsDemoTests.swift */; };
 		A4D3755C201736EA00EE71FE /* chartsDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3755B201736EA00EE71FE /* chartsDemoUITests.swift */; };
 		A4D3756920173DBE00EE71FE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D3756A20173DBF00EE71FE /* Charts.framework */; };
+		A4D3756D20185E7D00EE71FE /* chartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3756C20185E7D00EE71FE /* chartController.swift */; };
 		B6A35BE8433FB4F8ACDCFE5C /* Pods_chartsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6B0894A04EC419C85FCF08 /* Pods_chartsDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		A4D3755B201736EA00EE71FE /* chartsDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartsDemoUITests.swift; sourceTree = "<group>"; };
 		A4D3755D201736EA00EE71FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4D3756A20173DBF00EE71FE /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4D3756C20185E7D00EE71FE /* chartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartController.swift; sourceTree = "<group>"; };
 		CCDB1B0B044821EA5AA49B38 /* Pods-chartsDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chartsDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-chartsDemoUITests/Pods-chartsDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DD3F010076ED55E2A2B6B453 /* Pods-chartsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chartsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-chartsDemo/Pods-chartsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F2BC607DEE770D6C126BC6EC /* Pods-chartsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chartsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chartsDemo/Pods-chartsDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				A4D37542201736EA00EE71FE /* Assets.xcassets */,
 				A4D37544201736EA00EE71FE /* LaunchScreen.storyboard */,
 				A4D37547201736EA00EE71FE /* Info.plist */,
+				A4D3756C20185E7D00EE71FE /* chartController.swift */,
 			);
 			path = chartsDemo;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 			files = (
 				A4D3753E201736EA00EE71FE /* ViewController.swift in Sources */,
 				A4D3753C201736EA00EE71FE /* AppDelegate.swift in Sources */,
+				A4D3756D20185E7D00EE71FE /* chartController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
