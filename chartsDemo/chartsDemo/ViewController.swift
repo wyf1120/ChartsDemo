@@ -11,18 +11,18 @@ import Charts
 class ViewController: UIViewController {
     
     let lineview = LineChartView()
-    let date = LineChartData()
+    var date = LineChartData()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 230.0/255, green: 253.0/255, blue: 253.0/255, alpha: 1)
-        
+        configUI()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     func configUI() {
-        lineview.delegate = self as! ChartViewDelegate
+        lineview.delegate = self as? ChartViewDelegate
         lineview.frame = CGRect(x: 20, y: 30, width: self.view.bounds.size.width-40, height: self.view.bounds.size.height-60)
         self.view.addSubview(lineview)
         lineview.backgroundColor = UIColor(red: 230.0/255, green: 253.0/255, blue: 253.0/255, alpha: 1)
@@ -65,6 +65,9 @@ class ViewController: UIViewController {
         lineview.chartDescription?.text = "交易数量"
         lineview.chartDescription?.textColor = UIColor.darkGray
         
+        self.date = setData()
+        lineview.data = self.date
+        lineview.animate(xAxisDuration: 1.5)
     }
     
     func setData() -> LineChartData {
@@ -85,15 +88,44 @@ class ViewController: UIViewController {
             yValus.append(entry)
         }
         
-        var set1:LineChartDataSet?
+        var set1:IChartDataSet?
         
         //let bl = lineview.data?.dataSetCount > 1
         
-        
-        if (lineview.data!.dataSetCount > 0) {
-            let data = lineview.data
-            set1 = data?.dataSets[0] as! LineChartDataSet
+        if ( 1 > 2) {
+            let data:LineChartData = lineview.data as! LineChartData
+            set1 = data.dataSets[0] as! LineChartDataSet
+            return data
             
+        }
+        else
+        {
+            set1 = LineChartDataSet(values: yValus, label: "lineName")
+            
+//            //设置折线样式
+//            set1?.lineWidth = 1.0/UIScreen.main.scale
+//            set1?.drawValuesEnabled = true
+//            set1?.valueColors = [UIColor.brown]
+//            set1?.setColor(UIColor(red: 0/255, green: 127.0/255, blue: 1, alpha: 1))
+//            //拐点
+//            set1?.drawCirclesEnabled = false
+//            set1?.circleRadius = 4.0
+//            set1?.circleColors = [UIColor.red ,UIColor.green]
+//            set1?.drawCircleHoleEnabled = true
+//            set1?.circleHoleRadius = 2.0
+//            set1?.circleHoleColor = UIColor.black
+            
+            //将linechartDataSet对象放入数组中
+            var dataSets:Array<Any>?
+            dataSets?.append(set1)
+            
+            //创建lineChartData对象，此对象就是lineChartview需要的数据对象
+            
+            let data = LineChartData(dataSets: dataSets as? [IChartDataSet])
+            
+            data.setValueFont(UIFont.init(name: "HelveticaNeue-Light", size: 8.0))
+            data.setValueTextColor(UIColor.gray)
+            return data
         }
         
         
